@@ -1,16 +1,26 @@
-.algo {
-  font-size: 24px;
-  color: blue;
-  margin-bottom: 8px;
-}
-.frase {
 
-  color: brown;
+.png{
+  width: 200px;
+  height: 200px;
+  display: grid;
+}
+.h1{
  
-}
-.Celular1 {
+  font-size: 50px;
   color: red;
+  
 }
+.png2{
+  width: 200px;
+  height: 200px;
+  display: grid;
+}
+.png3{
+  width: 200px;
+  height: 200px;
+  display: grid;
+}
+
 .counter {
   font-size: 16px;
   padding: 5px 10px;

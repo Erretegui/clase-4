@@ -1,43 +1,37 @@
+import { useState } from 'react'
+import reactLogo from './assets/react.svg'
+import viteLogo from './assets/vite.svg'
+import heroImg from './assets/hero.png'
 import './App.css'
-import Nuevo from './Nuevo.jsx'
-import {Sindefault, Otro  } from './Sindefault.jsx'
-import Saludo from './Saludo.jsx'
-import Celular from './Celular.jsx'
-
+import { Titulo } from './components/Titulo'
+import Childrentest from './components/Childrentest'
+import Producto from './components/Producto'
 
 function App() {
-  const nombre = 'burgos'
-  const curso = '7mo  grado'
-  const datos = {marca: "samsung", modelo: "a52", color: "negro"}
 
+
+  const productos = [
+    { id: 1, nombre: "Laptop Dell", precio: 799.99, img:"imagedell.png" },
+    { id: 2, nombre: "Mouse Logitech", precio: 29.99, img:"imagelogitech.png" },
+    { id: 3, nombre: "Teclado Mecánico", precio: 129.99, img:"imageteclado.png" },
+  ]
 
   return (
     <>
-      <h1 className='algo'>Bienvenido a React</h1>
-      <h1>tomas {nombre}</h1>
-      <h2>{curso}</h2>
-      < Titulo/>
-      <Nuevo/>
-      <Sindefault/>
-      <Otro/>
-      <Saludo  nombre={"ariel"} curso={"7mo 5ta"} apellido={"erretegui"}></Saludo>
-      <Celular celular={datos}></Celular>
-      
-
-
+  {
+    productos.map(({id, nombre, precio, img}) => {
+      return(
+        <Producto key={id} nombre={nombre} precio={precio} img={img} />
+      )
+    }
+      )
+  }
+   
+      <Titulo srcImg="image1.png">la piedra</Titulo>
+      <Titulo  srcImg="image2.png">abel pitos</Titulo>
+      <Titulo  srcImg="image3.png">rodrigo el potrillo</Titulo>
     </>
   )
 }
- 
-function Titulo() {
-  return(
-     <>
-    <h2>tomi barber</h2>
-  </>
-  )
-
- 
-}
-
 
 export default App
